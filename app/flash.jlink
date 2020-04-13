@@ -1,0 +1,7 @@
+if SWD
+device stm32f407zg
+speed 4000
+#erase
+loadfile ./bin/kl-ftu/kl-ftu.hex
+r
+q
