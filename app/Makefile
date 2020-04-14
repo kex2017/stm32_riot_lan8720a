@@ -19,7 +19,8 @@ ROM_START_ADDR ?=0x08000000
 # USEMODULE += periph_gpio_irq
 # USEMODULE += isrpipe
 # USEMODULE += isrpipe_read_timeout
-# USEMODULE += xtimer
+USEMODULE += xtimer
+USEMODULE += printf_float
 # USEMODULE += fmt
 # USEMODULE += shell
 # USEMODULE += shell_commands
@@ -30,6 +31,7 @@ USEMODULE += stm32_eth
 USEMODULE += ipv4_addr
 USEMODULE += lwip_arp
 USEMODULE += lwip_ipv4
+# USEMODULE += lwip_sock
 # USEMODULE += lwip_dhcp_auto
 CFLAGS += -DETHARP_SUPPORT_STATIC_ENTRIES=1
 

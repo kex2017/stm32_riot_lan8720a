@@ -73,6 +73,7 @@ static const shell_command_t shell_commands[] = {
 
 static char line_buf[SHELL_DEFAULT_BUFSIZE];
 extern void stm32_eth_get_mac(char *out);
+extern int test_tcp_client(void);
 int main(void)
 {
     puts("RIOT lwip test application");
@@ -85,7 +86,7 @@ int main(void)
         printf("%02x ", mac_addr[i]);
     }
     printf("\r\n");
-
+    test_tcp_client();
 
     shell_run(shell_commands, line_buf, SHELL_DEFAULT_BUFSIZE);
 
